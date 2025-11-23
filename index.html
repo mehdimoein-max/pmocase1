@@ -84,7 +84,24 @@
             </div>
         </section>
 
-        </div>
+        <!-- Questions Section -->
+        <section id="questions-section" class="section-spacing">
+            <div class="card">
+                <header class="section-header">
+                    <h1>🧩 تحلیل و عارضه‌یابی</h1>
+                    <p>لطفاً با توجه به اطلاعات جلسه، به سوالات زیر پاسخ دهید تا نقشه راه آینده ترسیم شود.</p>
+                    <div class="actions" style="display: flex; gap: 10px; justify-content: center;">
+                        <button onclick="app.exportAnswers('pdf')" class="btn btn-primary"><i
+                                class="fa-solid fa-file-pdf"></i> دانلود PDF</button>
+                        <button onclick="app.exportAnswers('image')" class="btn btn-accent"><i
+                                class="fa-solid fa-image"></i> دانلود تصویر</button>
+                    </div>
+                </header>
+
+                <div id="questions-container">
+                    <!-- Questions injected here -->
+                </div>
+            </div>
         </section>
 
     </main>
