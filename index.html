@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیمرغ صنعت - مدیریت پروژه</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Libraries for Export & Docx -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-feather-pointed"></i> سیمرغ صنعت
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">🏠 خانه</a></li>
+                <li><a href="#intro-section">🏢 معرفی</a></li>
+                <li><a href="#dialogue-section">💬 جلسه</a></li>
+                <li><a href="#questions-section">❓ پرسش‌های کلیدی</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="app" class="container">
+
+        <!-- Hero -->
+        <header id="home" class="hero">
+            <div class="hero-content">
+                <h1>🚀 سیستم مدیریت پروژه سیمرغ صنعت</h1>
+                <p>حرکت به سوی استانداردسازی، چابکی و تعالی سازمانی</p>
+                <a href="#questions-section" class="btn btn-accent">شروع تحلیل وضعیت 👇</a>
+            </div>
+        </header>
+
+        <!-- Intro -->
+        <section id="intro-section" class="card grid-card section-spacing">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                    alt="Office">
+            </div>
+            <div class="card-content">
+                <h2>🏢 درباره سازمان ما</h2>
+                <p class="section-desc">آشنایی با ساختار، واحدها و چالش‌های فعلی شرکت سیمرغ صنعت</p>
+                <div id="intro-content" class="content-text"></div>
+            </div>
+        </section>
+
+        <!-- Dialogue -->
+        <section id="dialogue-section" class="card section-spacing">
+            <div class="card-header-row">
+                <h2>💬 شرح جلسه برنامه‌ریزی</h2>
+                <span class="badge">جلسه استراتژیک</span>
+            </div>
+            <p class="section-desc">مذاکرات مدیران ارشد برای انتخاب مسیر آینده مدیریت پروژه</p>
+            <div id="dialogue-container" class="chat-container">
+                <!-- Chat items will be injected here -->
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section id="summary-section" class="card grid-card reverse section-spacing">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                    alt="Meeting">
+            </div>
+            <div class="card-content">
+                <h2>📝 جمع‌بندی و خروجی جلسه</h2>
+                <p class="section-desc">نتایج نهایی و تصمیمات اتخاذ شده برای تیم مشاوره</p>
+                <div id="summary-content" class="content-text"></div>
+            </div>
+        </section>
+
+        <!-- Questions Section -->
+        <section id="questions-section" class="section-spacing">
+            <div class="card">
+                <header class="section-header">
+                    <h1>🧩 تحلیل و عارضه‌یابی</h1>
+                    <p>لطفاً با توجه به اطلاعات جلسه، به سوالات زیر پاسخ دهید تا نقشه راه آینده ترسیم شود.</p>
+                    <div class="actions">
+                        <button onclick="app.exportAnswers('pdf')" class="btn btn-primary"><i
+                                class="fa-solid fa-file-pdf"></i> دانلود گزارش (PDF)</button>
+                    </div>
+                </header>
+
+                <div id="questions-container">
+                    <!-- Questions injected here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 1404 شرکت سیمرغ صنعت | <span onclick="window.location.href='admin.html'" class="admin-link">ورود
+                    مدیران</span></p>
+            <p>طراحی شده برای بهبود فرآیندهای سازمانی 🚀</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
