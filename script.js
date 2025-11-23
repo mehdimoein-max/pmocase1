@@ -357,59 +357,8 @@ const app = {
                                     .catch(function (err) {
                                         console.log(err);
                                         alert('خطا در خواندن فایل');
-                                    });
-                            };
-                            reader.readAsArrayBuffer(file);
-                        },
 
-                        exportAnswers: function (type) {
-                            if (typeof html2pdf === 'undefined') {
-                                alert('کتابخانه PDF بارگذاری نشده است. لطفاً صفحه را رفرش کنید.');
-                                return;
-                            }
-
-                            const element = document.getElementById('questions-section');
-
-                            if (type === 'pdf') {
-                                // Hide buttons during export
-                                const btns = element.querySelector('.actions');
-                                if (btns) btns.style.display = 'none';
-
-                                const opt = {
-                                    margin: [10, 10, 10, 10],
-                                    filename: 'simorgh-project-analysis.pdf',
-                                    image: { type: 'jpeg', quality: 0.98 },
-                                    html2canvas: {
-                                        scale: 2, // Reduced to 2 for better stability
-                                        useCORS: true,
-                                        logging: true
-                                    },
-                                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-                                };
-
-                                try {
-                                    html2pdf().set(opt).from(element).save()
-                                        .then(() => {
-                                            if (btns) btns.style.display = 'block';
-                                        })
-                                        .catch(err => {
-                                            console.error(err);
-                                            alert('خطا در ایجاد PDF: ' + err.message);
-                                            if (btns) btns.style.display = 'block';
+                                        // Initialize App
+                                        document.addEventListener('DOMContentLoaded', () => {
+                                            app.init();
                                         });
-                                } catch (error) {
-                                    console.error("Error initiating PDF export:", error);
-                                    alert('خطا در شروع فرآیند PDF: ' + error.message);
-                                    if (btns) btns.style.display = 'block';
-                                }
-                            }
-                        }
-                    };
-
-                    // Expose app to global scope
-                    window.app = app;
-
-                    // Initialize App
-                    document.addEventListener('DOMContentLoaded', () => {
-                        app.init();
-                    });
